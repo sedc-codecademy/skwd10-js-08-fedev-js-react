@@ -1,1 +1,1 @@
-# skwd10-js-08-fedev-js-react
+# G9 & G10 source code repository for subject ReactJS
