@@ -11,3 +11,19 @@
   padding: 20px;
   border: 2px solid navy;
 }
+
+.blue {
+  background-color: navy;
+  color: lightgray !important;
+  padding: 20px;
+}
+
+.main__container > ul {
+  list-style: none;
+  padding: 0;
+}
+
+.main__container > ul li {
+  font-size: 18px;
+  padding: 5px;
+}
