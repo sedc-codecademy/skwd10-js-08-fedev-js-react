@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+}
+
+.App h1 {
+  color: red;
+}
+
+.heading__three {
+  background-color: lightblue;
+  padding: 20px;
+  border: 2px solid navy;
+}
