@@ -1,0 +1,18 @@
+header {
+    display: flex;
+    background-color: silver;
+    justify-content: space-between;
+}
+
+.appTitle {
+    font-size: 22px;
+    font-family: "cursive";
+    font-style: italic;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    width: 270px;
+    justify-content: space-around;
+}
