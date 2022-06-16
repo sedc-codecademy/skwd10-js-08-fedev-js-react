@@ -1,0 +1,23 @@
+.Card {
+  width: 200px;
+  height: 250px;
+  border: 2px solid navy;
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: aliceblue;
+}
+
+.Card h4 {
+  font-size: 23px;
+  margin-top: 25px;
+}
+
+.Card div {
+  padding-bottom: 30px;
+}
+
+.price {
+  color: darkgreen;
+}

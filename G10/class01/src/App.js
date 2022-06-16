@@ -27,8 +27,8 @@ function App() {
         <h1 className={colors[0]}>{heading}</h1>
         <h3 className="heading__three">{subHeading}</h3>
         <ul>
-          {colors.map(color => (
-            <li style={{ backgroundColor: color }} key={color}>
+          {colors.map((color,i) => (
+            <li style={{ backgroundColor: color }} key={color+i}>
               <strong>{color}</strong>
             </li>
           ))}
