@@ -4,7 +4,7 @@ import "./TodoList.css";
 const TodoList = props => {
   return (
     <div className="TodoList">
-      <h3>List Title</h3>
+      <h3>Todos List</h3>
       {props.todos.length <= 0 && <div>No Todos</div>}
       {props.todos.length > 0 && (
         <ul>
