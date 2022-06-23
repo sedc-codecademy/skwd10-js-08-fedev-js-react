@@ -1,0 +1,4 @@
+.People__container {
+  display: flex;
+  min-height: 300px;
+}

@@ -1,0 +1,21 @@
+.page {
+  /* width: 100%; */
+  min-height: 900px;
+  background-color: lightgoldenrodyellow;
+}
+
+.page__heading {
+  text-align: center;
+}
+
+.page__heading h2 {
+  margin: 0;
+  font-size: 35px;
+  padding-top: 20px;
+  font-weight: 400;
+}
+
+.page__heading p {
+  font-size: 18px;
+  font-weight: 400;
+}
