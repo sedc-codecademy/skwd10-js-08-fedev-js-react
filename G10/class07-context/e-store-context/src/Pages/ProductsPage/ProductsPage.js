@@ -1,7 +1,11 @@
 import ProductCard from "../../Components/ProductCard/ProductCard";
 import "./ProductsPage.css";
+import { useContext } from "react";
+import ProductsContext from "../../Contexts/ProductsContext";
 
-const ProductsPage = ({ products, addToCart }) => {
+const ProductsPage = () => {
+  const { products } = useContext(ProductsContext);
+
   return (
     <section className="page ProductsPage">
       <div className="page__heading">
@@ -9,11 +13,7 @@ const ProductsPage = ({ products, addToCart }) => {
       </div>
       <div className="card__container">
         {products.map(product => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            addToCart={addToCart}
-          />
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
     </section>

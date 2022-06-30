@@ -12,17 +12,60 @@ import { useState } from "react";
 function App() {
   const [products, setProducts] = useState(productsDummyData);
 
+  const addToCart = selectedProduct => {
+    setProducts(prevProducts =>
+      prevProducts.map(product => {
+        if (product.id === selectedProduct.id) {
+          product.inCart = true;
+          return product;
+        } else {
+          return product;
+        }
+      })
+    );
+  };
+
+  const removeFromCart = selectedProduct => {
+    setProducts(prevProducts =>
+      prevProducts.map(product => {
+        if (product.id === selectedProduct.id) {
+          product.inCart = false;
+          return product;
+        } else {
+          return product;
+        }
+      })
+    );
+  };
+
+  const getProductsInCart = () => {
+    return products.filter(product => product.inCart);
+  };
+
   return (
     <div className="App">
-      <Header title="E-STORE" />
+      <Header title="E-STORE" cartCount={getProductsInCart().length} />
       <Routes>
         <Route path="/" element={<Navigate to="/products" />} />
         <Route
           path="/products"
-          element={<ProductsPage products={products} />}
+          element={<ProductsPage products={products} addToCart={addToCart} />}
         />
-        <Route path="/products/:id" element={<ProductDetailsPage />} />
-        <Route path="/cart" element={<CartPage />} />
+        <Route
+          path="/products/:id"
+          element={
+            <ProductDetailsPage products={products} addToCart={addToCart} />
+          }
+        />
+        <Route
+          path="/cart"
+          element={
+            <CartPage
+              cartProducts={getProductsInCart()}
+              removeFromCart={removeFromCart}
+            />
+          }
+        />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer>
