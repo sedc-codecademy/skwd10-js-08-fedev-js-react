@@ -1,5 +1,6 @@
-import { createContext, useState } from "react";
-import productsDummyData from "../data/products.json";
+import { createContext, useState, useEffect } from "react";
+
+const PRODUCTS_URL = "https://fakestoreapi.com/products";
 
 const ProductsContext = createContext({
   products: [],
@@ -9,7 +10,13 @@ const ProductsContext = createContext({
 });
 
 export const ProductsProvider = props => {
-  const [products, setProducts] = useState(productsDummyData);
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch(PRODUCTS_URL)
+      .then(res => res.json())
+      .then(data => setProducts(data));
+  }, []);
 
   const addToCart = selectedProduct => {
     setProducts(prevProducts =>

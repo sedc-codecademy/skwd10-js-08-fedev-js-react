@@ -12,8 +12,8 @@ const ProductCard = ({ product, addToCart }) => {
       <div className="card__details">
         <p>{product.price}$</p>
         <Button
-          buttonText={product.inCart ? "ADDED" : "🛒"}
-          isDisabled={product.inCart}
+          buttonText={product.isInCart ? "ADDED" : "🛒"}
+          isDisabled={product.isInCart}
           onButtonClick={() => addToCart(product)}
         />
       </div>

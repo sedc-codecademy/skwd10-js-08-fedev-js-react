@@ -14,8 +14,8 @@ const ProductDetailsPanel = ({ product, addToCart }) => {
           <div className="panel__controls">
             <p>{product.price}$</p>
             <Button
-              buttonText={product.inCart ? "ADDED" : "🛒"}
-              isDisabled={product.inCart}
+              buttonText={product.isInCart ? "ADDED" : "🛒"}
+              isDisabled={product.isInCart}
               onButtonClick={() => addToCart(product)}
             />
           </div>

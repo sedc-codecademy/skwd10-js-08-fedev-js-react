@@ -16,7 +16,7 @@ function App() {
     setProducts(prevProducts =>
       prevProducts.map(product => {
         if (product.id === selectedProduct.id) {
-          product.inCart = true;
+          product.isInCart = true;
           return product;
         } else {
           return product;
@@ -29,7 +29,7 @@ function App() {
     setProducts(prevProducts =>
       prevProducts.map(product => {
         if (product.id === selectedProduct.id) {
-          product.inCart = false;
+          product.isInCart = false;
           return product;
         } else {
           return product;
@@ -39,7 +39,7 @@ function App() {
   };
 
   const getProductsInCart = () => {
-    return products.filter(product => product.inCart);
+    return products.filter(product => product.isInCart);
   };
 
   return (

@@ -6,6 +6,8 @@ import ProductsContext from "../../Contexts/ProductsContext";
 const ProductDetailsPanel = ({ product }) => {
   const { addToCart } = useContext(ProductsContext);
 
+  console.log("Product Details Panel Rerendered");
+
   return (
     <div className="ProductDetailsPanel">
       <h3>{product.title}</h3>

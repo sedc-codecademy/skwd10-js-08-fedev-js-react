@@ -8,36 +8,6 @@ import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
 import CartPage from "./Pages/CartPage/CartPage";
 
 function App() {
-  // const addToCart = selectedProduct => {
-  //   setProducts(prevProducts =>
-  //     prevProducts.map(product => {
-  //       if (product.id === selectedProduct.id) {
-  //         product.inCart = true;
-  //         return product;
-  //       } else {
-  //         return product;
-  //       }
-  //     })
-  //   );
-  // };
-
-  // const removeFromCart = selectedProduct => {
-  //   setProducts(prevProducts =>
-  //     prevProducts.map(product => {
-  //       if (product.id === selectedProduct.id) {
-  //         product.inCart = false;
-  //         return product;
-  //       } else {
-  //         return product;
-  //       }
-  //     })
-  //   );
-  // };
-
-  // const getProductsInCart = () => {
-  //   return products.filter(product => product.inCart);
-  // };
-
   return (
     <div className="App">
       <Header title="E-STORE" />
@@ -49,7 +19,7 @@ function App() {
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer>
-        <p>This app uses React Router Dom v6</p>
+        <p>This app was built using the Context Api</p>
       </Footer>
     </div>
   );
