@@ -1,0 +1,15 @@
+.Header {
+  background-color: lightblue;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.Header h2 {
+  margin: 0;
+  text-align: left;
+  font-size: 40px;
+  font-weight: 300;
+}
